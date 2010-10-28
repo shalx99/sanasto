@@ -14,7 +14,7 @@ void Dictionary_Filter::updateFilter(const QString& text)
 bool Dictionary_Filter::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     if (m_filter_value.size() == 0)
-        return true;
+        return false;
 
     QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
     QString string = sourceModel()->data(index).toString();
